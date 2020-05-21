@@ -1,0 +1,15 @@
+<div class="container" id="info" ng-if="myinfoCtrl.customer.menuItem">
+<h3>My Info</h3>
+
+  <br>
+    FirstName: {{ myinfoCtrl.customer.firstname}} <br><br>
+    LastName: {{ myinfoCtrl.customer.lastname}} <br><br>
+    Email: {{ myinfoCtrl.customer.email}} <br><br>
+    Phone: {{ myinfoCtrl.customer.phone}} <br><br>
+    Favorite:  {{myinfoCtrl.customer.menuItem.name}}<br><br>
+     {{myinfoCtrl.customer.menuItem.description}}    <br><br>
+    <img class="img-responsive" width="250" height="150" ng-src="{{myinfoCtrl.basePath}}/images/{{myinfoCtrl.customer.menuItem.short_name}}.jpg" alt="{{myinfoCtrl.customer.menuItem.name}}">
+</div>
+<div class="container" id="SignUp" ng-if="myinfoCtrl.customer.menuItem===undefined"
+<h3>Not Signed Up Yet.</h3> &nbsp;<a ui-sref="public.newsletter">Sign up Now!</a>
+<div>
